@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class WebElementAutomation {
+public class Textboxanddropdowns {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -21,12 +21,12 @@ public class WebElementAutomation {
 		//Select class defined
 				Select s= new Select(d.findElement(By.xpath("//select[@id='ctl00_mainContent_DropDownListCurrency']")));
 				
-				//INR selection
-				s.selectByValue("INR");
-				Thread.sleep(3000);
-				
 				//USD selection
 				s.selectByValue("USD");
+				Thread.sleep(3000);
+				
+				//INR selection
+				s.selectByValue("INR");
 				Thread.sleep(3000);
 		
 		//Departure city selection
@@ -36,6 +36,8 @@ public class WebElementAutomation {
 		
 		//Arrival city selection
 		d.findElement(By.xpath("(//a[@value='HBX'])[2]")).click();
+		
+		Thread.sleep(5000);
 		
 		d.quit();
 		
